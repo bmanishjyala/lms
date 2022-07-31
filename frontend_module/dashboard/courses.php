@@ -18,27 +18,64 @@ include "./components/sidebar_header.php"?>
 <div class="p-5 text-center bg-light">
     <h1 class="mb-3">Course</h1>
     <h4 class="mb-3">Create And Update All Course Here</h4>
-    <a class="btn btn-primary" href="" data-mdb-toggle="modal" data-mdb-target="#exampleModal" role="button">Add New Course</a>
+    <button type="button" class="btn btn-primary" data-mdb-toggle="modal" data-mdb-target="#exampleModal">
+ Add New Course
+</button>
   </div>
 
-<!-- Button trigger modal -->
-<button type="button" class="btn btn-primary" data-mdb-toggle="modal" data-mdb-target="#exampleModal2">
-  Launch demo modal
-</button>
 
 <!-- Modal -->
-<div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+        <h5 class="modal-title" id="exampleModalLabel">Course Basic Information</h5>
         <button type="button" class="btn-close" data-mdb-dismiss="modal" aria-label="Close"></button>
       </div>
-      <div class="modal-body">...</div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-mdb-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
+      <div class="modal-body">
+      <form>
+  <!-- 2 column grid layout with text inputs for the first and last names -->
+  <div class="row mb-4">
+    <div class="col">
+      <div class="form-outline">
+        <input type="text" id="form6Example1" class="form-control" />
+        <label class="form-label" for="form6Example1">Course Technology</label>
       </div>
+    </div>
+    <div class="col">
+      <div class="form-outline">
+        <input type="text" id="form6Example2" class="form-control" />
+        <label class="form-label" for="form6Example2">Course Name</label>
+      </div>
+    </div>
+  </div>
+
+  <!-- Text input -->
+  <div class="form-outline mb-4">
+    <input type="text" id="form6Example3" class="form-control" />
+    <label class="form-label" for="form6Example3">Published By</label>
+  </div>
+
+  <!-- Text input -->
+  <div class="form-outline mb-4">
+    <input type="text" id="form6Example4" class="form-control" />
+    <label class="form-label" for="form6Example4">Image Url</label>
+  </div>
+
+
+  <!-- Message input -->
+  <div class="form-outline mb-4">
+    <textarea class="form-control" id="form6Example7" rows="4"></textarea>
+    <label class="form-label" for="form6Example7">Additional information</label>
+  </div>
+
+ 
+
+  <!-- Submit button -->
+  <button type="submit" class="btn btn-primary btn-block mb-4">Add Course</button>
+</form>
+      </div>
+    
     </div>
   </div>
 </div>
