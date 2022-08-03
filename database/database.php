@@ -40,16 +40,15 @@ class Database{
 	public function read($query){
 		$con = $this->connect();
 
-		$stm = $con->prepare($query);
-		$result = $stm->execute();
+		$sql = $con->query($query);
+		$result = $sql->fetchAll(PDO::FETCH_ASSOC);
 		
 
-		if($result){
+		if(is_array($result) && count($result) > 0){
 			
-			$data = $stm->fetchAll(PDO::FETCH_ASSOC);
-			if(is_array($data) && count($data) > 0){
-				return $data;
-			}
+			
+				return $result;
+			
 			}
 		
 		return false;
